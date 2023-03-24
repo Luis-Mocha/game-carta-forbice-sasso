@@ -85,7 +85,7 @@ main {
     /* transition-delay: 2s; */
 }    
 .modal-content {
-    background-image: url(/assets/img/red-eyes.jpg);
+    background-image: url(../img/evil-eye.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
