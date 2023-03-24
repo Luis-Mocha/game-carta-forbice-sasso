@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Forbice Sasso</title>
+
+    <!-- link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?&family=Nosifer&display=swap" rel="stylesheet">
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Bootstrap Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- link CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <main class="bg-black text-light">
+        <!-- MY HAND -->
+        <div id="myhand" class="border p-3 text-uppercase fs-1 fw-semibold d-flex justify-content-evenly fixed-bottom">
+            <div on id="myCarta" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <span>Carta</span>
+            </div>
+            <div id="myForbice" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <span>Forbice</span>
+            </div>
+            <div id="mySasso" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <span>Sasso</span>
+            </div>
+        </div>
+        <!-- MY MOVE -->
+        <div id="myMove" class="text-center">
+        </div>
+
+        <!-- HIS HAND -->
+        <div id="evilhand" class="p-3 text-uppercase fs-1 fw-semibold ixed-top d-flex">
+            <!-- green eye -->
+            <img src="./assets/img/monster-eye.png" alt="Monster Eye" id="green-eye" class="monster-eye mx-auto">
+            <!-- evil eye -->
+            <img src="./assets/img/evil-eye.png" alt="Monster Eye Evil" id="red-eye" class="monster-eye mx-auto d-none">
+        </div>
+        <!-- HIS MOVE -->
+        <div id="hisMove" class="monster-move">
+        </div>
+
+        <!-- YOU LOSE -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark text-center p-3">
+                    <div class="modal-body">
+                        <span id="he-played"></span>
+                    </div>
+                    <div class="">
+                        <h1 class="modal-title fs-1 text-uppercase text-center" id="staticBackdropLabel">
+                            hai perso
+                        </h1>
+                    </div>
+                    <div class="modal-body">
+                        <span id="you-played"></span>
+                    </div>
+                    <div>
+                        <button type="button" onclick="refreshWindow()" class="btn mx-auto close-modal-button" data-bs-dismiss="modal">
+                            Okay...
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    
+    
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- link js -->
+    <script src="./assets/javascript/main.js"></script>
+</body>
+</html>
